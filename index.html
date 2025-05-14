@@ -3,19 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Links Visuais | Lucas Vitor</title>
+  <title>Links | Lucas Vitor</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
+    :root {
+      --primary: #ffffff;
+      --secondary: #cfcfcf;
+      --bg-gradient: linear-gradient(235deg, #000000a9, #000000, #ffffff7e);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(235deg, #ffffff, #333, #000000);
+      background: var(--bg-gradient);
       background-size: 900% 400%;
       animation: gradientBG 15s ease infinite;
-      color: #fff;
+      color: var(--primary);
+      padding: 60px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
       min-height: 100vh;
     }
 
@@ -27,81 +39,94 @@
 
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
-      text-transform: uppercase;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
       text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
-    p.description {
-      font-size: 1rem;
-      color: #cfcfcf;
-      margin-bottom: 30px;
+    .description {
+      font-size: 1.1rem;
+      color: var(--secondary);
       text-align: center;
-      max-width: 600px;
+      margin-bottom: 40px;
+      max-width: 700px;
     }
 
     .link-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
       width: 100%;
-      max-width: 1000px;
+      max-width: 1200px;
     }
 
     .card {
-      position: relative;
+      border-radius: 20px;
       overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+      width: 100%;
+      max-width: 540px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
     }
 
     .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px #333333;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     .card img {
       width: 100%;
-      height: 220px;
+      height: 360px;
       object-fit: cover;
       display: block;
     }
 
     .card-info {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-      padding: 15px;
-      color: #fff;
+      padding: 20px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     }
 
     .card-info h2 {
-      font-size: 1.1rem;
-      margin-bottom: 5px;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      font-weight: 600;
     }
 
     .card-info p {
-      font-size: 0.85rem;
-      color: #ccc;
-      margin: 0;
+      font-size: 0.95rem;
+      color: var(--secondary);
     }
 
     footer {
-      margin-top: 40px;
-      font-size: 0.8rem;
-      color: #ccc;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: var(--secondary);
+      text-align: center;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       h1 {
-        font-size: 1.6rem;
+        font-size: 2rem;
       }
+
+      .card {
+        max-width: 100%;
+      }
+
+      .card img {
+        height: 200px;
+      }
+
       .card-info h2 {
-        font-size: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .card-info p {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -113,58 +138,58 @@
 
   <div class="link-grid">
 
-    <a class="card" href="https://lucasvitor.vercel.app/" target="_blank">
-      <img src="/img/portfolio.jpg" alt="Portfólio" />
+    <a class="card" href="https://lucasvitor.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <img src="/img/portfolio.jpg" alt="Imagem do Portfólio de Lucas Vitor" />
       <div class="card-info">
         <h2>Portfólio</h2>
-        <p>Focado em cyber security.</p>
+        <p>Focado em Cyber Security.</p>
       </div>
     </a>
 
-    <a class="card" href="https://github.com/lucasvittor" target="_blank">
-      <img src="/img/github.jpg" alt="GitHub" />
+    <a class="card" href="https://github.com/lucasvittor" target="_blank" rel="noopener noreferrer">
+      <img src="/img/github.jpg" alt="Imagem do GitHub de Lucas Vitor" />
       <div class="card-info">
         <h2>GitHub</h2>
         <p>Repositórios com códigos.</p>
       </div>
     </a>
 
-    <a class="card" href="https://www.linkedin.com/in/lucasvittor" target="_blank">
-      <img src="/img/linkedin.webp" alt="LinkedIn" />
+    <a class="card" href="https://www.linkedin.com/in/lucasvittor" target="_blank" rel="noopener noreferrer">
+      <img src="/img/linkedin.webp" alt="Imagem do LinkedIn de Lucas Vitor" />
       <div class="card-info">
         <h2>LinkedIn</h2>
-        <p>Minha trajetória profissional.</p>
+        <p>Perfil profissional.</p>
       </div>
     </a>
 
-    <a class="card" href="https://los-santos-customscom.vercel.app/" target="_blank">
-        <img src="/img/los.webp" alt="Los Santos Customs" />
-        <div class="card-info">
-          <h2>Los Santos Customs</h2>
-          <p>Landing page inspirado no GTA 5.</p>
-        </div>
-      </a>
+    <a class="card" href="https://los-santos-customscom.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <img src="/img/los.webp" alt="Projeto Los Santos Customs" />
+      <div class="card-info">
+        <h2>Los Santos Customs</h2>
+        <p>Landing page inspirada no GTA V.</p>
+      </div>
+    </a>
 
-    <a class="card" href="https://jesus-swart.vercel.app/" target="_blank">
-      <img src="/img/jesus.jpg" alt="Jesus em 1ª Pessoa" />
+    <a class="card" href="https://jesus-swart.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <img src="/img/jesus.jpg" alt="Projeto Jesus em Primeira Pessoa" />
       <div class="card-info">
         <h2>Jesus em 1ª Pessoa</h2>
-        <p>Um projeto de evangelização.</p>
+        <p>Evangelização visual e reflexiva.</p>
       </div>
     </a>
 
-    <a class="card" href="https://calculator-zeta-seven-86.vercel.app/" target="_blank">
-        <img src="/img/calculadora.jpg" alt="Calculadora" />
-        <div class="card-info">
-          <h2>Calculadora</h2>
-          <p>Simples, prática e funcional.</p>
-        </div>
-      </a>
+    <a class="card" href="https://calculator-zeta-seven-86.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <img src="/img/calculadora.jpg" alt="Calculadora Web" />
+      <div class="card-info">
+        <h2>Calculadora</h2>
+        <p>Simples, prática e funcional.</p>
+      </div>
+    </a>
 
   </div>
 
   <footer>
-    Feito por por Lucas Vitor
+    Desenvolvido por Lucas Vitor – © 2025
   </footer>
 
 </body>
