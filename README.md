@@ -1,9 +1,5 @@
 # 🌐 Linktree Pessoal
 
-<div align="center">
-  <img src="img/home.jpg" style="width: 100%; max-width: 700px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" alt="Capa do Projeto">
-</div>
-
 **Status:** ✅ Finalizado
 
 Este é um projeto de **Linktree pessoal** desenvolvido com tecnologias web puras: **HTML** e **CSS**. A proposta é reunir de forma prática e visualmente agradável os principais links de redes sociais, portfólio e projetos em um só lugar.
