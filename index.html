@@ -3,215 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="img/Avatar.jpg" />
-  <title>Links | Lucas Vitor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap"
-    rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #ffffff;
-      --secondary: #cfcfcf;
-      --bg-gradient: linear-gradient(235deg, #000000a9, #000000, #ffffff7e);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-gradient);
-      background-size: 900% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: var(--primary);
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    @keyframes gradientBG {
-      0% {
-        background-position: 10% 50%;
-      }
-
-      50% {
-        background-position: 100% 50%;
-      }
-
-      100% {
-        background-position: 10% 50%;
-      }
-    }
-
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.8rem;
-      text-align: center;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    .description {
-      font-size: 1.1rem;
-      color: var(--secondary);
-      text-align: center;
-      margin-bottom: 40px;
-      max-width: 700px;
-    }
-
-    .link-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      width: 100%;
-      max-width: 1200px;
-    }
-
-    .card {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
-      width: 100%;
-      max-width: 540px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .card img {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-info {
-      padding: 20px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    }
-
-    .card-info h2 {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .card-info p {
-      font-size: 0.95rem;
-      color: var(--secondary);
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: var(--secondary);
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      .card {
-        max-width: 100%;
-      }
-
-      .card img {
-        height: 200px;
-      }
-
-      .card-info h2 {
-        font-size: 1.1rem;
-      }
-
-      .card-info p {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+  <title>Lucas Vitor | Links</title>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-
-  <h1>Lucas Vitor</h1>
-  <p class="description">Confira meus projetos e redes!</p>
-
-  <div class="link-grid">
-
-    <a class="card" href="https://github.com/lucasvittor" target="_blank" rel="noopener noreferrer">
-      <img src="img/github.jpg" alt="Imagem do GitHub de Lucas Vitor" />
-      <div class="card-info">
-        <h2>GitHub</h2>
-        <p>Repositórios com códigos.</p>
-      </div>
-    </a>
-
-    <a class="card" href="https://www.linkedin.com/in/lucasvittor" target="_blank" rel="noopener noreferrer">
-      <img src="img/linkedin.webp" alt="Imagem do LinkedIn de Lucas Vitor" />
-      <div class="card-info">
-        <h2>LinkedIn</h2>
-        <p>Perfil profissional.</p>
-      </div>
-    </a>
-
-    <a class="card" href="https://lucasvitor.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="img/portfolio.png" alt="Imagem do Portfólio de Lucas Vitor" />
-      <div class="card-info">
-        <h2>Portfólio</h2>
-        <p>Focado em Cyber security.</p>
-      </div>
-    </a>
-
-    <a class="card" href="https://tryhackme.com/p/root086" target="_blank" rel="noopener noreferrer">
-      <img src="img/TryHackMe.png" alt="Imagem do TryHackMe de Lucas Vitor" />
-      <div class="card-info">
-        <h2>TryHackMe</h2>
-        <p>Treinamento em Cyber security.</p>
-      </div>
-    </a>
-
-
-    <a class="card" href="https://los-santos-customscom.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="img/los.webp" alt="Projeto Los Santos Customs" />
-      <div class="card-info">
-        <h2>Los Santos Customs</h2>
-        <p>Landing page inspirada no GTA V.</p>
-      </div>
-    </a>
-
-    <a class="card" href="https://jesus-swart.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="img/jesus.jpg" alt="Projeto Jesus em Primeira Pessoa" />
-      <div class="card-info">
-        <h2>Jesus em 1ª Pessoa</h2>
-        <p>Evangelização visual e reflexiva.</p>
-      </div>
-    </a>
-
-    <a class="card" href="https://calculator-zeta-seven-86.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="img/calculadora.jpg" alt="Calculadora Web" />
-      <div class="card-info">
-        <h2>Calculadora</h2>
-        <p>Simples, prática e funcional.</p>
-      </div>
-    </a>
-
+  <button class="menu-toggle" onclick="toggleMenu()">
+    <i data-lucide="menu"></i>
+  </button>
+  <div class="sidebar">
+    <img src="img/Avatar.jpg" alt="Avatar" class="avatar" />
+    <h2>Lucas Vitor</h2>
+    <nav>
+      <a href="https://github.com/lucasvittor" target="_blank"><i data-lucide="github"></i>GitHub</a>
+      <a href="https://linkedin.com/in/lucasvittor" target="_blank"><i data-lucide="linkedin"></i>LinkedIn</a>
+      <a href="https://lucasvitor.vercel.app/" target="_blank"><i data-lucide="globe"></i>Portfólio</a>
+      <a href="https://tryhackme.com/p/root086" target="_blank"><i data-lucide="terminal"></i>TryHackMe</a>
+    </nav>
   </div>
 
-  <footer>
-    Desenvolvido por Lucas Vitor – © 2025
-  </footer>
-
+  <div class="overlay" onclick="toggleMenu()"></div>
+  <div class="content">
+    <h1>Projetos</h1>
+    <div class="card-grid">
+      <a href="https://jesus-swart.vercel.app/" target="_blank" class="card">
+        <img src="img/jesus.jpg" alt="Jesus em 1ª Pessoa">
+        <div class="card-info">
+          <h3>Jesus em 1ª Pessoa</h3>
+          <p>Evangelização Visual e Reflexiva.</p>
+        </div>
+      </a>
+      <a href="https://los-santos-customscom.vercel.app/" target="_blank" class="card">
+        <img src="img/los.webp" alt="Los Santos Customs">
+        <div class="card-info">
+          <h3>Los Santos Customs</h3>
+          <p>Landing Page Inspirada No GTA V.</p>
+        </div>
+      </a>
+      <a href="https://calculator-zeta-seven-86.vercel.app/" target="_blank" class="card">
+        <img src="img/calculadora.jpg" alt="Calculadora Web">
+        <div class="card-info">
+          <h3>Calculadora</h3>
+          <p>Simples, Prática e Funcional.</p>
+        </div>
+      </a>
+      <a href="https://github.com/root086/itau" target="_blank" class="card">
+        <img src="img/itau.jpg" alt="Itau Back-End">
+        <div class="card-info">
+          <h3>Itau Back-End</h3>
+          <p>Uma API REST Simples</p>
+        </div>
+      </a>
+      <a href="https://github.com/root086/autoclear" target="_blank" class="card">
+        <img src="img/autoclear.png" alt="AutoClear">
+        <div class="card-info">
+          <h3>AutoClear</h3>
+          <p>Script Automatizado Em Shell</p>
+        </div>
+      </a>
+      <a href="https://github.com/root086/sysecure" target="_blank" class="card">
+        <img src="img/sysecure.png" alt="SySecure">
+        <div class="card-info">
+          <h3>SySecure</h3>
+          <p>Auditoria De Segurança</p>
+        </div>
+      </a>
+      <a href="https://github.com/root086/tools-n1" target="_blank" class="card">
+        <img src="img/tools.png" alt="Tools-N1">
+        <div class="card-info">
+          <h3>Tools-N1</h3>
+          <p>Ferramentas PowerShell</p>
+        </div>
+      </a>
+      <a href="https://github.com/root086/password" target="_blank" class="card">
+        <img src="img/password.png" alt="Password">
+        <div class="card-info">
+          <h3>Password</h3>
+          <p>Gerador De Senhas</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <script src="/js/script.js""> </script>
 </body>
-
 </html>
