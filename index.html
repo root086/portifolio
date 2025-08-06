@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas Vitor | Links</title>
+  <title>Lucas Vitor | Portfolio</title>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">
-    <i data-lucide="menu"></i>
+  <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+    <i data-lucide="menu" id="menuIcon"></i>
   </button>
+
   <div class="sidebar">
     <img src="img/Avatar.jpg" alt="Avatar" class="avatar" />
     <h2>Lucas Vitor</h2>
+    <h4>Catolico | Pentest | Dev | T.I</h4>
     <nav>
       <a href="https://github.com/lucasvittor" target="_blank"><i data-lucide="github"></i>GitHub</a>
       <a href="https://linkedin.com/in/lucasvittor" target="_blank"><i data-lucide="linkedin"></i>LinkedIn</a>
@@ -23,11 +27,37 @@
       <a href="https://tryhackme.com/p/root086" target="_blank"><i data-lucide="terminal"></i>TryHackMe</a>
     </nav>
   </div>
-
   <div class="overlay" onclick="toggleMenu()"></div>
-  <div class="content">
+  <div class="content" id="home">
+    <section id="sobre" class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Sobre Mim</h2>
+          <p class="description">
+            Me chamo Lucas, um Assistente de TI apaixonado por Cibersegurança, Infraestrutura, Automação e Talvez
+            Programação. Busco transformar ideias em algo pratico, sempre inspirado por Jesus, o verdadeiro Firewall da
+            minha vida, que protege, guia e dá propósito a cada coisa que eu faço.
+            <br>
+            <br>
+            🎓 Graduado em Análise e Desenvolvimento de Sistemas<br>
+            📚 Pós-graduando em Segurança Cibernética<br>
+            🛠️ Experiência em resolução de problemas, redes e automações<br>
+            🧠 No tempo livre? Programo alguma ideia aleatória, ou corro pro fut... Talvez um Fifa<br>
+            🎮 Viciado em Hacknet! Quem diria que hackear (no jogo!) seria tão divertido?<br>
+
+          </p>
+          <a class="about-btn" onclick="document.getElementById('project').scrollIntoView({ behavior: 'smooth' });">
+            <i data-lucide="info"></i> Saiba Mais
+          </a>
+
+        </div>
+        <div class="about-image">
+          <img src="img/terminal.png" alt="terminal" />
+        </div>
+      </div>
+    </section>
     <h1>Projetos</h1>
-    <div class="card-grid">
+    <div class="card-grid" id="project">
       <a href="https://jesus-swart.vercel.app/" target="_blank" class="card">
         <img src="img/jesus.jpg" alt="Jesus em 1ª Pessoa">
         <div class="card-info">

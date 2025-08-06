@@ -12,6 +12,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       background-color: var(--bg);
@@ -46,7 +50,6 @@
 
     .sidebar h2 {
       font-family: 'Orbitron', sans-serif;
-      text-align: center;
       font-size: 1.2rem;
       margin-top: 10px;
       color: var(--text);
@@ -61,7 +64,6 @@
 
     .sidebar nav a {
       display: flex;
-      align-items: center;
       gap: 12px;
       text-decoration: none;
       color: var(--secondary);
@@ -76,6 +78,73 @@
     .sidebar nav i {
       width: 22px;
       height: 22px;
+    }
+
+    /* ---------------------- ABOUT ---------------------- */
+    .about-section {
+      background: var(--glass);
+      border-radius: 15px;
+      padding: 50px 30px;
+      margin-bottom: 60px;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .about-text {
+      flex: 1 1 350px;
+    }
+
+    .about-text h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .about-text .description {
+      color: var(--secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e1e1e;
+      color: #fff;
+      padding: 12px 20px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .about-btn:hover {
+      background: #333;
+      border-color: #666;
+      transform: translateX(5px);
+    }
+
+
+    .about-image {
+      flex: 1 1 100px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 12px;
+
     }
 
     /* ---------------------- CONTENT ---------------------- */
@@ -170,7 +239,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 15;
     }
 
@@ -216,7 +285,4 @@
         margin-bottom: 10px;
       }
 
-      .sidebar nav {
-        align-items: center;
-      }
     }
