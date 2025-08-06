@@ -210,6 +210,96 @@
       color: var(--secondary);
     }
 
+    /* ----------- SECTION PROFISSIONAL ----------- */
+
+.profissional-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.profissional-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  padding: 40px;
+  gap: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.profissional-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profissional-text h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.profissional-text .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+
+.profissional-text .description strong {
+  color: var(--text);
+}
+
+.profissional-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  margin-top: 20px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.profissional-btn:hover {
+  background: #00e5ff;
+  color: #000;
+}
+
+.profissional-image {
+  flex: 1;
+  text-align: center;
+}
+
+.profissional-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .profissional-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .profissional-text {
+    text-align: center;
+  }
+
+  .profissional-btn {
+    justify-content: center;
+  }
+}
+
+
     /* ---------------------- HAMBURGER BUTTON ---------------------- */
 
     .menu-toggle {
