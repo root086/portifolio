@@ -80,7 +80,7 @@
       height: 22px;
     }
 
-    /* ---------------------- ABOUT ---------------------- */
+    /* ---------------------- SOBRE ---------------------- */
     .about-section {
       background: var(--glass);
       border-radius: 15px;
@@ -253,23 +253,23 @@
   color: var(--text);
 }
 
-.profissional-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
-  margin-top: 20px;
-  color: #000;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+.profission-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
 
-.profissional-btn:hover {
-  background: #00e5ff;
-  color: #000;
-}
+    .profission-btn:hover {
+      background: #333;
+      border-color: #666;
+      transform: translateX(5px);
+    }
 
 .profissional-image {
   flex: 1;
@@ -283,20 +283,52 @@
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .profissional-container {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
+    /* ----------- SECTION FORMAÇÕES ----------- */
 
-  .profissional-text {
-    text-align: center;
-  }
+.formacoes-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .profissional-btn {
-    justify-content: center;
-  }
+.formacao-box {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1 1 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.formacao-box:hover {
+  transform: translateY(-5px);
+}
+
+.formacao-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.formacao-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+}
+
+.formacao-box h3 {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.formacao-box p {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 
@@ -352,6 +384,10 @@
         transform: translateX(-100%);
       }
 
+        .sidebar-content {
+    margin-top: 100px;
+        }
+
       .sidebar.open {
         transform: translateX(0);
       }
@@ -370,9 +406,32 @@
       }
 
       .sidebar .avatar {
-        width: 100px;
-        height: 80px;
+        width: 200px;
+        height: 200px;
         margin-bottom: 10px;
       }
+
+        .profissional-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .profissional-text {
+    text-align: center;
+  }
+
+  .profissional-btn {
+    justify-content: center;
+  }
+
+        .formacao-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .formacao-img {
+    margin-bottom: 15px;
+  }
 
     }

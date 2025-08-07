@@ -3,22 +3,13 @@
   function toggleMenu() {
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.querySelector('.overlay');
-    const menuIcon = document.getElementById('menuIcon');
-
+    const icon = document.getElementById('menuIcon');
     sidebar.classList.toggle('open');
     overlay.classList.toggle('show');
-
-    if (sidebar.classList.contains('open')) {
-      menuIcon.setAttribute("data-lucide", "x");
+    if (icon.getAttribute('data-lucide') === 'menu') {
+      icon.setAttribute('data-lucide', 'x');
     } else {
-      menuIcon.setAttribute("data-lucide", "menu");
+      icon.setAttribute('data-lucide', 'menu');
     }
-  }
-
-    function scrollToProjects(event) {
-    event.preventDefault(); 
-    const section = document.getElementById("project");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    lucide.createIcons();
   }
