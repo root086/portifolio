@@ -349,6 +349,69 @@ body {
   line-height: 1.6;
 }
 
+/* ---------------------- Certificados ---------------------- */
+
+.certificados-section {
+  margin-top: 48px;
+}
+
+.cert-category {
+  margin-bottom: 40px;
+}
+
+.cert-category h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: var(--text-color, #fff);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+  padding-bottom: 4px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.cert-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  backdrop-filter: blur(2px);
+}
+
+
+.cert-card img {
+  width: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.85);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.modal:target {
+  display: flex;
+}
+
+
 /* ---------------------- HAMBURGER BUTTON ---------------------- */
 
 .menu-toggle {

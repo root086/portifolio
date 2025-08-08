@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (i < commandText.length) {
         cmdSpan.textContent += commandText.charAt(i);
         i++;
-        setTimeout(typing, 150);
+        setTimeout(typing, 180);
       } else {
         if (callback) setTimeout(callback, 300);
       }
