@@ -111,3 +111,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// Validação do formulário
+(function formValidation(){
+  const form = document.querySelector('.contato-form');
+  if (!form) return;
+
+  function showError(input, msg) {
+    const group = input.closest('.form-group');
+    const small = group?.querySelector('.error-msg');
+    if (small) {
+      small.textContent = msg;
+      small.style.display = 'block';
+    }
+    input.setAttribute('aria-invalid', 'true');
+  }
+
+  function clearError(input) {
+    const group = input.closest('.form-group');
+    const small = group?.querySelector('.error-msg');
+    if (small) small.style.display = 'none';
+    input.removeAttribute('aria-invalid');
+  }
+
+  form.addEventListener('submit', (e) => {
+    let ok = true;
+    const nome = form.querySelector('#nome');
+    const email = form.querySelector('#email');
+    const msg = form.querySelector('#mensagem');
+
+    if (!nome.value || nome.value.trim().length < 2) {
+      showError(nome, 'Informe seu nome.');
+      ok = false;
+    } else clearError(nome);
+
+    if (!email.validity.valid) {
+      showError(email, 'Informe um e-mail válido.');
+      ok = false;
+    } else clearError(email);
+
+
+    if (!ok) e.preventDefault();
+  });
+
+  form.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('input', () => clearError(el));
+  });
+})();

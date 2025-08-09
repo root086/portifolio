@@ -411,6 +411,89 @@ body {
   display: flex;
 }
 
+/* ---------------------- Fale Comigo ---------------------- */
+
+.contato-section {
+  margin: 80px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.contato-form {
+  margin-top: 18px;
+  border: 1px solid var(--glass-border);
+  background: color-mix(in oklab, var(--card) 86%, transparent);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid var(--glass-border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent);
+}
+
+.error-msg {
+  display: none;
+  color: #ef4444;
+  font-size: 0.8rem;
+}
+
+.enviar-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  background: var(--primary, #0f0f0f);
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.enviar-btn:hover {
+  background-color: #333;
+  border-color: #555;
+  transform: translateX(4px);
+}
+
 
 /* ---------------------- HAMBURGER BUTTON ---------------------- */
 
@@ -512,4 +595,5 @@ body {
     margin-bottom: 15px;
     width: 250px;
   }
+  .form-row { grid-template-columns: 1fr; }
 }

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Mensagem enviada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+    --bg:#0e0e0e;
+    --text:#fff;
+    --secondary: #999999;
+    --glass: rgba(255, 255, 255, 0.09);
+    }
+    body {
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.6 system-ui;
+      padding:20px;
+      text-align:center;
+      
+    }
+    .card {
+      max-width:560px;
+      padding:28px;
+      border:1px solid var(--glass); 
+      border-radius:14px;
+      background:var(--glass);
+    }
+    .card img {
+      max-width:400px;
+      height:auto;
+      display:block;
+      margin:0 auto 20px;
+      z-index: -100;
+    }
+    h1 {margin:0 0 8px; 
+    font-family: "Orbitron", sans-serif;
+    }
+    p {
+    opacity:.9;margin:0 0 16px;
+    }
+    a {  
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    background: var(--primary, #0f0f0f);
+    padding: 12px 24px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+    a:hover {
+    background-color: #333;
+    border-color: #555;
+    transform: translateX(4px);
+}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="img/favicon.png" alt="Favicon">
+    <h1>Mensagem enviada</h1>
+    <p>Valeu pelo contato! Já recebi sua mensagem e vou responder em breve! 🙏</p>
+    <a href="/">← Voltar ao portfólio</a>
+  </div>
+</body>
+</html>
