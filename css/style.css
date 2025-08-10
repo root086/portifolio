@@ -24,6 +24,12 @@ body {
   min-height: 100vh;
 }
 
+h1{
+    font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
 /* ---------------------- SIDEBAR ---------------------- */
 
 .sidebar {
@@ -149,12 +155,6 @@ body {
   margin-left: 260px;
   padding: 50px 40px;
   flex: 1;
-}
-
-.content h1 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
 }
 
 .card-grid {
@@ -494,6 +494,130 @@ body {
   transform: translateX(4px);
 }
 
+/* ---------------------- Footer ---------------------- */
+
+.site-footer{
+  margin-top: 64px;
+  border-top: 1px solid var(--glass-border);
+  background: color-mix(in oklab, var(--card) 86%, transparent);
+  backdrop-filter: blur(8px);
+}
+.footer-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 2fr 1.2fr;
+  gap: 24px;
+  align-items: center;
+}
+.footer-brand{
+  display: flex; 
+  align-items: center; 
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+}
+.footer-logo{
+  width: 300px; 
+  height: 250px;
+}
+.footer-brand h3{ 
+  font-family: "Orbitron", sans-serif; 
+  margin-bottom: 4px;
+ }
+.footer-brand p{ 
+  color: var(--secondary); 
+  font-size: .95rem; 
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px 16px; 
+  align-items: start; 
+  justify-items: start; 
+}
+
+.footer-title{
+  text-align: center;
+}
+
+.footer-description{
+  text-align: center;
+}
+
+.footer-nav a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color .2s ease, transform .12s ease;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+  transform: translateX(3px);
+}
+
+.footer-social{ 
+  list-style:none; 
+  display:flex; 
+  gap:12px; 
+  padding:0; 
+  margin:6px 0 0; 
+}
+.footer-social a{
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 0.3s ease;
+}
+.footer-social a:hover{ 
+  transform: translateY(-2px); 
+  border-color: var(--accent); 
+}
+.footer-social i{ 
+  width:20px; 
+  height:20px; 
+}
+
+.footer-bottom{
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  gap:12px; 
+  padding:14px 24px; 
+  position: relative;
+}
+.footer-bottom p{
+ color: var(--secondary); 
+ font-size:.95rem; 
+ text-align:center; 
+}
+
+.back-to-top{
+  position:absolute; 
+  right:24px;
+  width:40px; 
+  height:40px; 
+  border-radius:999px;
+  display:grid; 
+  place-items:center;
+  border:1px solid var(--glass-border);
+  background: var(--card);
+  color: var(--text);
+  text-decoration:none;
+  transition: transform .15s ease, border-color .2s ease;
+}
+.back-to-top:hover{
+   transform: translateY(-3px); border-color: var(--accent);
+   }
+.back-to-top i{ 
+  width:20px; height:20px;
+}
+
+
 
 /* ---------------------- HAMBURGER BUTTON ---------------------- */
 
@@ -530,70 +654,4 @@ body {
 
 .overlay.show {
   display: block;
-}
-
-/* ---------------------- RESPONSIVO ---------------------- */
-
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .sidebar {
-    transform: translateX(-100%);
-  }
-
-  .sidebar-content {
-    margin-top: 100px;
-  }
-
-  .sidebar.open {
-    transform: translateX(0);
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 100px 20px 20px;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card img {
-    height: 200px;
-  }
-
-  .sidebar .avatar {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-  }
-
-  .profissional-container {
-    flex-direction: column;
-  }
-
-  .profissional-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .profission-btn {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .formacao-content {
-    flex-direction: column;
-  }
-
-  .formacao-img {
-    margin-bottom: 15px;
-    width: 250px;
-  }
-  .form-row { grid-template-columns: 1fr; }
 }

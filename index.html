@@ -7,6 +7,7 @@
   <title>Lucas Vitor | Portfolio</title>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <link rel="icon" type="image/svg+xml" href="img/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet" />
@@ -22,7 +23,7 @@
     <div class="sidebar-content"></div>
     <img src="img/Avatar.jpg" alt="Avatar" class="avatar" />
     <h2>Lucas Vitor</h2>
-    <h4>Catolico | Pentest | Dev | T.I</h4>
+    <h4>Futuro Especialista Em Cibersegurança</h4>
     <nav>
       <a href="https://github.com/lucasvittor" target="_blank"><i data-lucide="github"></i>GitHub</a>
       <a href="https://linkedin.com/in/lucasvittor" target="_blank"><i data-lucide="linkedin"></i>LinkedIn</a>
@@ -47,8 +48,6 @@
     </div>
   </div>
 </section>
-
-
     
     <h1>Projetos</h1>
     <div class="card-grid" id="project">
@@ -132,6 +131,7 @@
         </div>
       </div>
     </section>
+    
     <section id="profissional" class="profissional-section">
       <div class="profissional-container">
         <div class="profissional-text">
@@ -156,16 +156,16 @@
       </div>
     </section>
 
+    <h1>Formações</h1>
     <section id="formacoes" class="formacoes-section">
-      <div class="profissional-text">
-        <h2>Formações</h2>
+      <div class="profissional-text"> 
       </div>
       <div class="formacoes-container">
         <div class="formacao-box">
           <div class="formacao-content reverse">
             <div class="formacao-texto">
               <h3>UniFavip Wyden</h3>
-              <p class="description">Ensino Superior Em: <strong>Análise e Desenvolvimento de Sistemas 🎓</strong>
+              <p class="description">Ensino Superior Em: <strong>Análise e Desenvolvimento de Sistemas 🎓</strong><br>2022 - 2024
                 <br><br>
                 • Algoritmos e lógica de programação<br>
                 • Big Data e SQL<br>
@@ -173,9 +173,6 @@
                 • POO e Engenharia de Software<br>
                 • Projetos aplicados à realidade empresarial
               </p>
-              <br>
-              2022 - 2024
-              <br>
             </div>
             <img src="img/certificados/ads.jpeg" alt="ADS" class="formacao-img">
           </div>
@@ -185,7 +182,7 @@
           <div class="formacao-content reverse">
             <div class="formacao-texto">
               <h3>UniFavip Wyden</h3>
-              <p class="description">Pós-Graduação Em: <strong>Segurança Cibernética 🛡️</strong>
+              <p class="description">Pós-Graduação Em: <strong>Segurança Cibernética 🛡️</strong><br>2025 - 2026
                 <br><br>
                 • Blue Team<br>
                 • ISO 27001, LGPD e Governança<br>
@@ -193,9 +190,6 @@
                 • Fundamentos De Segurança Da Informação<br>
                 • Gestão Estrategica De T.I
               </p>
-              <br>
-              2025 - 2026
-              <br>
             </div>
             <img src="img/sec.webp" alt="Segurança Cibernética" class="formacao-img">
           </div>
@@ -203,11 +197,9 @@
       </div>
     </section>
 
-    <section id="certificados" class="certificados-section">
-  <div class="profissional-text">
-    <h2>Certificados</h2>
-  </div>
 
+<h1>Certificados</h1>
+<section id="certificados" class="certificados-section">
   <div class="cert-category">
     <h3>Red Team</h3>
     <div class="cert-grid">
@@ -259,10 +251,11 @@
   </div>
 </section>
 
+
 <section id="contato" class="contato-section">
   <div class="profissional-text">
-    <h2>Fale comigo</h2>
-    <p class="description">Quer trocar uma ideia sobre pentest, automação ou projetos? Manda mensagem.</p>
+    <h1 class="footer-title">Fale comigo</h1>
+    <p class="footer-description">Bora trocar uma ideia sobre pentest, automação ou projetos?</p>
   </div>
 
   <form
@@ -303,6 +296,45 @@
     </button>
   </form>
 </section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="img/favicon.png" alt="Logo Lucas Vitor" class="footer-logo" />
+      <div>
+        <h3>Lucas Vitor</h3>
+        <p>Amante Da Tecnologia e Da Eucaristia</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Navegação do rodapé">
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#project">Projetos</a>
+      <a href="#profissional">Experiência</a>
+      <a href="#formacoes">Formações</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#ferramentas">Ferramentas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="footer-cta">
+      <p class="cta-text">Aberto a freelas.</p>
+      <ul class="footer-social" aria-label="Redes sociais">
+        <li><a href="https://github.com/lucasvittor" target="_blank" rel="noopener"><i data-lucide="github"></i></a></li>
+        <li><a href="https://linkedin.com/in/lucasvittor" target="_blank" rel="noopener"><i data-lucide="linkedin"></i></a></li>
+        <li><a href="https://tryhackme.com/p/root086" target="_blank" rel="noopener"><i data-lucide="terminal"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Desenvolvido Por Lucas Vitor.</p>
+    <a href="#home" class="back-to-top" aria-label="Voltar ao topo">
+      <i data-lucide="arrow-up"></i>
+    </a>
+  </div>
+</footer>
 
 
 
