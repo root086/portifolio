@@ -159,7 +159,7 @@ h1{
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
 }
 
@@ -175,7 +175,7 @@ h1{
 
 .card img {
   width: 100%;
-  height: 280px;
+  height: 380px;
   object-fit: cover;
   display: block;
   filter: brightness(0.5);
@@ -370,20 +370,21 @@ h1{
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 18px;
+  justify-content: center;
 }
 
 .cert-card {
   position: relative;
   overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  backdrop-filter: blur(2px);
 }
 
 
 .cert-card img {
-  width: 300px;
+  width: 100%;
+  height: 350px;
   object-fit: cover;
   display: block;
 }
