@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const hostSpan = document.createElement("span");
     hostSpan.className = "host";
-    hostSpan.textContent = promptHost;
+    hostSpan.textContent = promptHost;  
 
     const dirSpan = document.createElement("span");
     dirSpan.className = "dir";

@@ -42,7 +42,6 @@
      pointer-events: auto; 
 }
   .profissional-section,
-  .formacoes-section,
   .certificados-section,
   .contato-section { 
     margin: 24px auto;
@@ -88,20 +87,6 @@
      width: 100%;
       justify-content: center;
      }
-
-  /* Formações */
-  .formacao-content { 
-    flex-direction: column; 
-    gap: 4px; 
-    align-items: left; 
-    margin-top: 5px;
- }
-  .formacao-img {
-     width: 100%; max-width: 360px;
-     }
-  .formacoes-section .formacao-texto { 
-    width: 100%; text-align: left; 
-}
 
   /* Projetos / Certificados */
   .card-grid { 
