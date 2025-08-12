@@ -86,26 +86,39 @@ document.addEventListener("DOMContentLoaded", function () {
       printOutput("sobre_mim.txt");
       typeCommand("lucas", "kali", "~/Documentos", "cat sobre_mim.txt", () => {
         printBlock(`
-          <p>nome="Lucas"</p>
-          <p>cargo="Assistente de TI"</p>
-          <p>paixoes=["Cibersegurança", "Infraestrutura", "Automação", "Programação (às vezes)"]</p>
-          <p>inspiracao="Jesus — o verdadeiro Firewall da minha vida, que protege, guia e dá propósito a tudo que faço"</p>
+Lucas Vitor  
 
-          <p>experiencia=(</p>
-          <p>  "🛠️ Resolução de problemas",</p>
-          <p>  "🌐 Redes e conectividade",</p>
-          <p>  "🤖 Automações"</p>
-          <p>)</p>
+Assistente de TI | Em Transição para Cibersegurança
 
-          <p>hobbies=(</p>
-          <p>  "🧠 Programar ideias aleatórias",</p>
-          <p>  "⚽ Jogar Um Fut",</p>
-          <p>  "🎮 Ou Um Fifa",</p>
-          <p>  "💻 Hacknet — Quem diria que hackear (no jogo!) seria tão divertido?!"</p>
-          <p>)</p>
+Bom, minha experiência com a tecnologia começou no tempo do modem, mesmo sem saber mexer, meu pai me chamava para resolver os problemas de internet.
+Desde então foi só ladeira abaixo (rsrs) — ou melhor, um mergulho sem volta no mundo da tecnologia.
+E mesmo sendo uma criança o que era chato se transformou em paixão.
+Apesar de ser formado em ADS não me identifiquei tanto com o mundo do desenvolvimento.
+Porém, tem algo nos terminais que me acalma (pegou a referência?).
+Hoje busco o mundo da segurança, pois sinto que a cada estudo e pesquisa encontrei o meu lugar.
 
-          <p>echo "Busco transformar ideias em algo pratico, sempre com propósito e segurança!"</p>
+Paixões:  
+  • Segurança ofensiva e defensiva  
+  • Infraestrutura  
+  • Automação  
+  • Programação (às vezes)
 
+Inspiração:  
+Jesus, o verdadeiro Firewall da minha vida, que protege, guia e dá propósito a tudo que faço.
+
+Experiência:  
+Resolução de problemas em ambientes corporativos  
+Configuração e manutenção de redes e servidores  
+Desenvolvimento de scripts e automações para otimizar tarefas  
+Suporte a sistemas
+
+Passa-Tempo:  
+Rezar (só assim pra dar conta de tudo)  
+Programar ideias aleatórias  
+Jogar um fut ou um FIFA  
+Explorar CTFs no TryHackMe
+
+echo "Busco transformar ideias em algo prático, sempre com propósito e segurança!"
         `);
       });
     });
