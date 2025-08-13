@@ -133,7 +133,8 @@ h1{
 }
 
 .terminal-body {
-  padding: 15px;
+  min-height: 200px;
+  padding: 15px 20px;
   font-size: 14px;
   white-space: pre-wrap;
   line-height: 1.9;
@@ -147,6 +148,23 @@ h1{
 }
 .dir {
   color: #b4b413;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  align-items: center;
+  background-color: var(--text);
+  vertical-align: -0.15em;
+  animation: blink 1s steps(1) infinite;
+  margin-left: 5px;      
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ---------------------- PROJETOS ---------------------- */

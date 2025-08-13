@@ -1,5 +1,10 @@
 /* Base mobile */
 @media (max-width: 900px) {
+
+  section { 
+    padding-top: 24px;
+  }
+
   html, body { 
     overflow-x: hidden; 
 }
@@ -63,26 +68,23 @@
      align-items: left;
       padding: 0.5px;
      }
-  .profissional-image { 
-    width: 100%;
-    display: grid; 
-    place-items: left;
-     margin-top: 60px;
+
+  .profissional-image {
+    display: none;
      }
-  .profissional-image img {
-     width: 100%;
-     max-width: 720px;
-    }
+
   .profissional-text {
      width: 100%; 
      max-width: 100%; 
      padding-inline: 5px; 
      text-align: left; 
     }
+
   .profissional-text .description {
     margin: 0;
      line-height: 1.55;
     }
+
   .profission-btn {
      width: 100%;
       justify-content: center;
@@ -90,7 +92,8 @@
 
   /* Projetos / Certificados */
   .card-grid { 
-    grid-template-columns: 1fr; gap: 5px; 
+    grid-template-columns: 1fr; 
+    gap: 5px; 
 }
   .card img { 
     height: 200px;
@@ -110,13 +113,16 @@
 
   /* Formulário */
   .form-row {
-    grid-template-columns: 1fr; gap: 10px; 
+    grid-template-columns: 1fr; 
+    gap: 10px; 
 }
   .contato-form {
-     padding: 16px; gap: 12px;
+     padding: 16px; 
+     gap: 12px;
  }
   .enviar-btn { 
-    width: 100%; justify-content: left; 
+    width: 100%; 
+    justify-content: left; 
 }
 
   /* Footer limpo */

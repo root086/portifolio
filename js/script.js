@@ -17,26 +17,49 @@ function toggleMenu() {
 }
 
 //Animação Terminal
-document.addEventListener("DOMContentLoaded", function () {
-  const terminal = document.getElementById("terminal-body");
+const SPEED_MIN = 75;
+const SPEED_MAX = 170;
+const AFTER_CMD_DELAY = 220;
 
-  function typeCommand(
-    promptUser,
-    promptHost,
-    promptDir,
-    commandText,
-    callback
-  ) {
+document.addEventListener("DOMContentLoaded", startTerminalAnimation);
+
+function getTerminalEl() {
+  return document.querySelector('#terminal-body, .terminal-body');
+}
+
+function appendLineHTML(html) {
+  const t = getTerminalEl();
+  if (!t) return;
+  const p = document.createElement('p');
+  p.className = 'line prompt-line';
+  p.innerHTML = html;
+  t.appendChild(p);
+  t.scrollTop = t.scrollHeight;
+}
+
+function showPromptWithCursor(user, host, path) {
+  appendLineHTML(
+    `<span class="user">${user}</span>@<span class="host">${host}</span>:` +
+    `<span class="dir">${path}</span>$<span class="cursor" aria-hidden="true"></span>`
+  );
+}
+
+function startTerminalAnimation() {
+  const terminal = getTerminalEl();
+  if (!terminal) return;
+
+  terminal.innerHTML = "";
+
+  function typeCommand(promptUser, promptHost, promptDir, commandText, callback) {
     const line = document.createElement("p");
 
-    // Nomes fixos
     const userSpan = document.createElement("span");
     userSpan.className = "user";
     userSpan.textContent = promptUser;
 
     const hostSpan = document.createElement("span");
     hostSpan.className = "host";
-    hostSpan.textContent = promptHost;  
+    hostSpan.textContent = promptHost;
 
     const dirSpan = document.createElement("span");
     dirSpan.className = "dir";
@@ -49,43 +72,56 @@ document.addEventListener("DOMContentLoaded", function () {
     line.appendChild(dirSpan);
     line.appendChild(document.createTextNode("$ "));
 
-    // Texto Digitado
     const cmdSpan = document.createElement("span");
+    const cursor = document.createElement("span");
+    cursor.className = "cursor";
+    cursor.style.animation = "none";
+    cmdSpan.appendChild(cursor);
     line.appendChild(cmdSpan);
 
     terminal.appendChild(line);
+    terminal.scrollTop = terminal.scrollHeight;
 
-    // Animação De Digitação
     let i = 0;
-    function typing() {
+    (function typing() {
       if (i < commandText.length) {
-        cmdSpan.textContent += commandText.charAt(i);
+        cmdSpan.insertBefore(document.createTextNode(commandText.charAt(i)), cursor);
         i++;
-        setTimeout(typing, 180);
+        terminal.scrollTop = terminal.scrollHeight;
+        const jitter = SPEED_MIN + Math.random() * (SPEED_MAX - SPEED_MIN);
+        setTimeout(typing, jitter);
       } else {
-        if (callback) setTimeout(callback, 300);
+        setTimeout(() => {
+          cursor.remove();
+          if (callback) setTimeout(callback, AFTER_CMD_DELAY);
+        }, 60);
       }
-    }
-    typing();
+    })();
   }
 
   function printOutput(text) {
     const out = document.createElement("p");
     out.textContent = text;
     terminal.appendChild(out);
+    terminal.scrollTop = terminal.scrollHeight;
   }
 
   function printBlock(html) {
     const div = document.createElement("div");
     div.innerHTML = html;
     terminal.appendChild(div);
+    terminal.scrollTop = terminal.scrollHeight;
   }
 
   typeCommand("lucas", "kali", "~", "cd Documentos", () => {
-    typeCommand("lucas", "kali", "~/Documentos", "ls", () => {
-      printOutput("sobre_mim.txt");
-      typeCommand("lucas", "kali", "~/Documentos", "cat sobre_mim.txt", () => {
-        printBlock(`
+    setTimeout(() => {
+      typeCommand("lucas", "kali", "~/Documentos", "ls", () => {
+        setTimeout(() => {
+          printOutput("sobre_mim.txt");
+          setTimeout(() => {
+            typeCommand("lucas", "kali", "~/Documentos", "cat sobre_mim.txt", () => {
+              setTimeout(() => {
+                printBlock(`
 Lucas Vitor  
 
 Assistente de TI | Em Transição para Cibersegurança
@@ -119,11 +155,20 @@ Jogar um fut ou um FIFA
 Explorar CTFs no TryHackMe
 
 echo "Busco transformar ideias em algo prático, sempre com propósito e segurança!"
-        `);
+                `);
+                setTimeout(() => {
+                  showPromptWithCursor("lucas", "kali", "~/Documentos");
+                }, 120);
+              }, 120);
+            });
+          }, 120);
+        }, 120);
       });
-    });
+    }, 120);
   });
-});
+}
+
+
 
 
 // Validação do formulário
