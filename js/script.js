@@ -134,10 +134,10 @@ Porém, tem algo nos terminais que me acalma (pegou a referência?).
 Hoje busco o mundo da segurança, pois sinto que a cada estudo e pesquisa encontrei o meu lugar.
 
 Paixões:  
-  • Segurança ofensiva e defensiva  
-  • Infraestrutura  
-  • Automação  
-  • Programação (às vezes)
+Segurança ofensiva e defensiva  
+Infraestrutura  
+Automação  
+Programação (às vezes)
 
 Inspiração:  
 Jesus, o verdadeiro Firewall da minha vida, que protege, guia e dá propósito a tudo que faço.
