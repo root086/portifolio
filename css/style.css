@@ -296,6 +296,7 @@ h1{
 
 .cert-category {
   margin-bottom: 40px;
+  flex: 1;
 }
 
 .cert-category h3 {
@@ -309,23 +310,27 @@ h1{
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 18px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 180px));
+  gap: 30px;
 }
 
 .cert-card {
   position: relative;
+  border-radius: 15px;
   overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 
 .cert-card img {
   width: 100%;
-  height: 350px;
+  height: 340px;
   object-fit: cover;
   display: block;
+  transition: filter 0.3s ease;
 }
 
 /* Modal */
