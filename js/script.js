@@ -21,6 +21,8 @@ const SPEED_MIN = 75;
 const SPEED_MAX = 170;
 const AFTER_CMD_DELAY = 220;
 
+const REVEAL_SELECTOR = '#conteudo-restante, .after-terminal';
+
 document.addEventListener("DOMContentLoaded", startTerminalAnimation);
 
 function getTerminalEl() {
@@ -113,6 +115,13 @@ function startTerminalAnimation() {
     terminal.scrollTop = terminal.scrollHeight;
   }
 
+  function revealAfterTerminal() {
+    document.querySelectorAll(REVEAL_SELECTOR).forEach(el => {
+      el.classList.remove('hidden');     
+      el.classList.add('is-visible');  
+    });
+  }
+
   typeCommand("lucas", "kali", "~", "cd Documentos", () => {
     setTimeout(() => {
       typeCommand("lucas", "kali", "~/Documentos", "ls", () => {
@@ -158,6 +167,7 @@ echo "Busco transformar ideias em algo prático, sempre com propósito e seguran
                 `);
                 setTimeout(() => {
                   showPromptWithCursor("lucas", "kali", "~/Documentos");
+                  setTimeout(revealAfterTerminal, 500);
                 }, 120);
               }, 120);
             });
