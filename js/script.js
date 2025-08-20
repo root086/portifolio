@@ -131,6 +131,23 @@ function startTerminalAnimation() {
             typeCommand("lucas", "kali", "~/Documentos", "cat sobre_mim.txt", () => {
               setTimeout(() => {
                 printBlock(`
+  ┌──────────────────────────┐
+  │  root@kali:~# exploit.sh │
+  │  Implantando Palavra...  │
+  │                          │
+  │  > payload: EVANGELHO    │
+  │  > status: SUCESSO ✅    │
+  │  > privilégio: SALVAÇÃO  │
+  │  > sessão: VIDA ETERNA   │
+  └──────────────────────────┘
+             \\  ^__^
+              \\ (x x)\\_______
+                (__)\\       )\\
+                    ||----w || ||
+                    ||      || 
+`);
+
+                printBlock(`
 Lucas Vitor  
 
 Assistente de TI | Em Transição para Cibersegurança
