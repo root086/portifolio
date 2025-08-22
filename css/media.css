@@ -150,6 +150,97 @@
  }
 }
 
+/* Notebooks médios (entre mobile e desktop full) */
+@media (min-width: 901px) and (max-width: 1366px) {
+
+  /* Layout principal */
+  .content { 
+    margin-left: 240px; 
+    padding: 80px 24px 28px;
+  }
+
+  /* Sidebar */
+  .sidebar { 
+    width: 240px; 
+    transform: none; 
+    box-shadow: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+  .menu-toggle,
+  .overlay { 
+    display: none; 
+  }
+
+  /* Seções */
+  .profissional-section,
+  .certificados-section,
+  .contato-section {
+    margin: 32px auto;
+    max-width: 960px;
+  }
+
+  /* Títulos */
+  .profissional-text h2 {
+    text-align: left;
+    font-size: clamp(2rem, 2.6vw, 2.2rem);
+    margin: 20px 0 14px;
+  }
+
+  /* Experiência */
+  .profissional-container { 
+ display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  }
+  .profissional-image { 
+    display: block; 
+    width: 40%; 
+    max-width: 300px;
+  }
+  .profissional-text { 
+    width: 60%; 
+    text-align: justify;
+  }
+
+  /* Projetos / Certificados */
+  .card-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+  }
+  .cert-grid { 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Formulário */
+  .form-row { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px; 
+  }
+  .contato-form { 
+    padding: 20px; 
+  }
+  .enviar-btn { 
+    width: auto; 
+    justify-content: center; 
+  }
+
+  /* Footer */
+  .footer-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 24px; 
+    text-align: left; 
+  }
+  .footer-nav { 
+    grid-template-columns: repeat(3, minmax(120px,1fr)); 
+    justify-items: start; 
+  }
+}
+
 /* Phones pequenos */
 @media (max-width: 420px) {
   .content { 
