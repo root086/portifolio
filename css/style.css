@@ -35,6 +35,11 @@ h1{
     margin-top: 20px;
 }
 
+h3{
+  font-family: "Orbitron", sans-serif;
+}
+
+
 /* ---------------------- SIDEBAR ---------------------- */
 
 .sidebar {
@@ -229,88 +234,161 @@ h1{
 }
 
 
-/* ----------- PROFISSIONAL ----------- */
-
-.profissional-section {
-  margin: 80px auto;
-  padding: 0 20px;
+/* PROFISSIONAL, FORMAÇÃO, LAB, BOOTCAMP  */
+.cv-section{ 
+  padding-inline:16px; 
+  margin-block:28px; 
+}
+.cv-container{ 
+  max-width:auto; 
+  margin-left:0; 
+  margin-right:auto; 
 }
 
-.profissional-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  padding: 40px 30px;
-  gap: 40px;
-  backdrop-filter: blur(12px);
-  max-width: 1600px;
-  margin: 0 auto;
-  transition: all 0.3s ease-in-out;
+.cv-header{ 
+  margin:6px 0 14px; 
+}
+.cv-title{
+  font-family:"Orbitron",sans-serif;
+  font-size:2rem;
+  margin:20px 0;
+  color:var(--text);
 }
 
-.profissional-text {
-  flex: 1 1 400px;
+.resume-list{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom:22px;
 }
 
-.profissional-text h2 {
-  font-family: "Orbitron", sans-serif;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: var(--text);
+@media (min-width:901px){
+  .resume-list{
+    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+    gap: 22px 24px;
+    align-items: stretch;
+  }
 }
 
-.profissional-text .description {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--secondary);
+.resume-item{
+  min-width: 0;
+  display:grid;
+  grid-template-columns: 1fr;
+  row-gap:14px;
+  border-radius:12px;
+  padding:20px;
+  height:100%;
 }
 
-.profissional-text .description strong {
-  color: var(--text);
+@media (min-width:901px){
+  .resume-item{
+    grid-template-columns: minmax(220px, 300px) 1fr; 
+    column-gap:24px;
+    align-items:start;
+  }
+  .resume-item.with-divider .ri-content{
+    padding-left:24px;
+  }
 }
 
-.profission-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  background: var(--primary, #0f0f0f);
-  padding: 12px 24px;
-  border-radius: 10px;
-  border: 1px solid #444;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: 20px;
+.ri-aside{
+  display:grid;
+  grid-template-columns: 72px 1fr;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+.ri-logo{
+  width:72px; height:72px;
+  border-radius:20px;
+  object-fit:cover;
+}
+.ri-logo--square{ 
+  border-radius:20px;
+ }
+
+.ri-meta{ 
+  display:grid; 
+  gap:2px; 
+  min-width:0; 
+}
+.ri-company{ 
+  font-weight:700; 
+  color:var(--text);
+ }
+.ri-location,.ri-dates{ 
+  color:var(--secondary); 
+  font-size:.9rem; 
 }
 
-.profission-btn:hover {
-  background-color: #333;
-  border-color: #555;
-  transform: translateX(4px);
+.ri-content{
+  min-width: 0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.ri-role{
+  margin:0;
+  font-weight:800;
+  color:var(--text);
+  font-size:1.12rem;
+}
+.ri-lead{
+  margin:0;
+  color:var(--secondary);
+  font-size:.96rem;
+  line-height:1.6;
+  overflow-wrap:anywhere; 
+  word-break:normal;
 }
 
-.profissional-image {
-  flex: 1 1 50px;
-  text-align: center;
+.ri-bullets{ 
+  list-style:none; 
+  margin:0; 
+  padding:0; 
+}
+.ri-bullets li{
+  position:relative;
+  padding-left:18px;
+  margin:6px 0;
+  color:var(--secondary);
+  overflow-wrap:anywhere;
+}
+.ri-bullets li::before{
+  content:"▹";
+  position:absolute;
+  left:0;
+  color:var(--text);
+  font-weight:700;
 }
 
-.profissional-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+.ri-btn{
+  align-self:flex-start;
+  display:inline-flex; align-items:center; gap:10px;
+  color:#fff; background:#0f0f0f;
+  padding:10px 18px; border-radius:10px;
+  border:1px solid #444; font-weight:700;
+  text-decoration:none; transition:.2s ease;
+}
+.ri-btn:hover{ 
+  background:#333;
+  border-color:#555;
+  transform:translateX(4px); }
+
+.ri-subimg {
+  width: 300px;
+  height: 250px;
+  max-width: 500px;  
+  border-radius: 8px;
+  margin-top: 10px;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.profissional-image img:hover {
-  transform: scale(1.03);
-}
 
+img{ 
+  max-width:100%;
+  height:auto; 
+  display:block; }
 
 /* ---------------------- Certificados ---------------------- */
 
@@ -497,6 +575,10 @@ h1{
 .footer-brand p{ 
   color: var(--secondary); 
   font-size: .95rem; 
+}
+
+.freelas{
+  font-family: "Orbitron", sans-serif;
 }
 
 .footer-nav {

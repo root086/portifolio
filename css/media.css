@@ -1,219 +1,160 @@
-/* Base mobile */
+/* Mobile */
 @media (max-width: 900px) {
 
-  section { 
-    padding-top: 24px;
-  }
+  section {
+     padding-top: 24px; 
+    }
 
-  html, body { 
-    overflow-x: hidden; 
-}
-  img, video, iframe { 
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-}
-
-  /* Layout principal */
   .content { 
     margin-left: 0; 
     padding: 72px 16px 20px; 
-}
+  }
 
-  /* Sidebar */
-  .menu-toggle { 
-    display: block; 
-    position: fixed; 
-    top: 12px; 
-    left: 12px; 
-    z-index: 40; 
-}
-  .sidebar { 
-    width: min(86vw, 320px);
-     transform: translateX(-100%);
-      box-shadow: 0 8px 36px rgba(0,0,0,.35); 
-    }
-  .sidebar.open { 
-    transform: translateX(0);
- }
-  .overlay {
+  .menu-toggle {
      display: block; 
-     opacity: 0; 
-     pointer-events: none; 
-     transition: opacity .2s; 
+     position: fixed; 
+     top: 12px; 
+     left: 12px; 
+     z-index: 40; 
     }
-  body.menu-open .overlay { 
-    opacity: 1;
-     pointer-events: auto; 
-}
-  .profissional-section,
-  .certificados-section,
-  .contato-section { 
-    margin: 24px auto;
-}
 
-  /* Títulos */
-    .profissional-text h2 {
-    text-align: left;
-    font-size: clamp(1.8rem, 5vw, 1.6rem);
-    margin: 14px 0 10px;
-    line-height: 1.1;
+  .sidebar { 
+    width: min(86vw, 320px); 
+    transform: translateX(-100%); 
+    box-shadow: 0 8px 36px rgba(0,0,0,.35); 
+  }
+
+  .sidebar.open { 
+    transform: translateX(0); 
+  }
+
+  .overlay { 
+    display: block; 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity .2s; 
   }
   
+  body.menu-open .overlay { 
+    opacity: 1; 
+    pointer-events: auto; 
+  }
 
-  /* Experiência */
-  .profissional-container { 
-    flex-direction: column;
-     gap: 4px; 
-     align-items: left;
-      padding: 0.5px;
-     }
+  .certificados-section,
+  .contato-section { 
+    margin: 24px auto; 
+  }
 
-  .profissional-image {
-    display: none;
-     }
-
-  .profissional-text {
-     width: 100%; 
-     max-width: 100%; 
-     padding-inline: 5px; 
-     text-align: left; 
-    }
-
-  .profissional-text .description {
-    margin: 0;
-     line-height: 1.55;
-    }
-
-  .profission-btn {
-     width: 100%;
-      justify-content: center;
-     }
-
-  /* Projetos / Certificados */
   .card-grid { 
     grid-template-columns: 1fr; 
     gap: 5px; 
-}
-  .card img { 
-    height: 200px;
- }
-  .cert-grid { 
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 0 16px;
-}
-  .cert-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    object-fit: cover;
-}
+  }
 
-  /* Formulário */
-  .form-row {
+  .card img { 
+    height: 200px; 
+  }
+
+  .cert-grid { 
+    grid-template-columns: 1fr; 
+    gap: 14px; 
+    padding: 0 16px; 
+  }
+
+  .cert-card img { 
+    width: 100%; 
+    border-radius: 6px; 
+    object-fit: cover; 
+  }
+
+  .resume-list { 
+    grid-template-columns: 1fr; 
+    gap: 18px; 
+  }
+
+  .resume-item { 
+    grid-template-columns: 1fr; 
+    row-gap: 14px; 
+  }
+
+  .form-row { 
     grid-template-columns: 1fr; 
     gap: 10px; 
-}
-  .contato-form {
-     padding: 16px; 
-     gap: 12px;
- }
-  .enviar-btn { 
-    width: 100%; 
-    justify-content: left; 
-}
+  }
 
-  /* Footer limpo */
-  .footer-grid {
-    grid-template-columns: 1fr;
-     gap: 16px; 
-     padding: 20px 16px; 
-     text-align: left; 
-    }
+  .contato-form { 
+    padding: 16px; 
+    gap: 12px; 
+  }
+
+  .enviar-btn {
+   width: 100%; 
+   justify-content: left; 
+  }
+
+  .footer-grid { 
+    grid-template-columns: 1fr; 
+    gap: 16px; 
+    padding: 20px 16px; 
+    text-align: left; 
+  }
+
   .footer-nav { 
-    display: grid; 
     grid-template-columns: repeat(2, minmax(120px,1fr)); 
     gap: 6px 18px; 
     justify-items: left; 
-}
-  .footer-cta { 
-    justify-self: left; 
-}
-  .footer-bottom { 
-    flex-direction: column; 
-    gap: 8px; 
-}
-  .back-to-top {
-    position: static;
- }
-}
-
-/* Notebooks médios (entre mobile e desktop full) */
-@media (min-width: 901px) and (max-width: 1366px) {
-
-  /* Layout principal */
-  .content { 
-    margin-left: 240px; 
-    padding: 80px 24px 28px;
   }
 
-  /* Sidebar */
+  .footer-cta { 
+    justify-self: left; 
+  }
+
+  .footer-bottom { flex-direction: column; gap: 8px; }
+  .back-to-top { position: static; }
+}
+
+/*  💻 Notebooks */
+@media (min-width: 901px) and (max-width: 1366px) {
+
+  .content { 
+    margin-left: 240px; 
+    padding: 80px 24px 28px; 
+  }
+
+  /* Sidebar fixa */
   .sidebar { 
     width: 240px; 
     transform: none; 
-    box-shadow: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
+    box-shadow: none; 
   }
-  .menu-toggle,
-  .overlay { 
+  .menu-toggle, .overlay { 
     display: none; 
   }
 
   /* Seções */
-  .profissional-section,
   .certificados-section,
-  .contato-section {
-    margin: 32px auto;
-    max-width: 960px;
+  .contato-section { 
+    margin: 32px auto; 
+    max-width: 960px; 
   }
 
-  /* Títulos */
-  .profissional-text h2 {
-    text-align: left;
-    font-size: clamp(2rem, 2.6vw, 2.2rem);
-    margin: 20px 0 14px;
-  }
-
-  /* Experiência */
-  .profissional-container { 
- display: flex;
-  justify-content: space-between;
-  gap: 32px;
-  flex-wrap: wrap;
-  }
-  .profissional-image { 
-    display: block; 
-    width: 40%; 
-    max-width: 300px;
-  }
-  .profissional-text { 
-    width: 60%; 
-    text-align: justify;
-  }
-
-  /* Projetos / Certificados */
+  /* Certificados */
   .card-grid { 
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
   }
   .cert-grid { 
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+  }
+
+  /* Currículo */
+  .resume-list { 
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); 
+    gap: 22px 24px; 
+  }
+  .resume-item { 
+    grid-template-columns: minmax(220px, 300px) 1fr; 
+    column-gap: 24px; 
   }
 
   /* Formulário */
@@ -222,34 +163,33 @@
     gap: 16px; 
   }
   .contato-form { 
-    padding: 20px; 
-  }
-  .enviar-btn { 
-    width: auto; 
-    justify-content: center; 
-  }
+    padding: 20px;
+   }
+  .enviar-btn {
+     width: auto; 
+     justify-content: center; 
+    }
 
   /* Footer */
   .footer-grid { 
     grid-template-columns: repeat(2, 1fr); 
-    gap: 24px; 
-    text-align: left; 
+    gap: 24px; text-align: left; 
   }
   .footer-nav { 
     grid-template-columns: repeat(3, minmax(120px,1fr)); 
-    justify-items: start; 
-  }
+    justify-items: start;
+   }
 }
 
-/* Phones pequenos */
+/* Mobile */
 @media (max-width: 420px) {
   .content { 
-    padding: 64px 14px 18px; 
-}
+    padding: 64px 14px 18px;
+   }
   .cert-grid { 
-    grid-template-columns: 1fr;
-}
+    grid-template-columns: 1fr; 
+  }
   .cert-card img { 
-    height: 180px;
- }
+    height: 180px; 
+  }
 }
